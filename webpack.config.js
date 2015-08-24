@@ -1,12 +1,21 @@
 var path = require("path");
 var webpack = require("webpack");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var node_modules = path.resolve(__dirname, 'node_modules');
+var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 
 module.exports = {
+    devtool: 'source-map',
     entry: ['./app/index.js'],
     output: {
         path: path.join(__dirname, './build'),
         filename: 'bundle.js',
         publicPath: '/'
+    },
+    resolve: {
+        alias: {
+          'react': pathToReact
+        }
     },
     module: {
         loaders: [
@@ -17,15 +26,21 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: 'style!css!sass'
+                loader: ExtractTextPlugin.extract(
+                    'css?sourceMap!' +
+                    'sass?sourceMap'
+                )
             },
             {
-                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
                 loader: 'url-loader?limit=100000'
             }
         ]
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin('styles.css')
+    ]
 };
