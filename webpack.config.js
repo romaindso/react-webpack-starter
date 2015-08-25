@@ -6,7 +6,7 @@ var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 
 module.exports = {
     devtool: 'source-map',
-    entry: ['./app/index.js'],
+    entry: ['webpack/hot/dev-server', './app/index.js'],
     output: {
         path: path.join(__dirname, './build'),
         filename: 'bundle.js',
