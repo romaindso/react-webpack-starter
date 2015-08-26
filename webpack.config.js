@@ -1,8 +1,6 @@
 var path = require("path");
 var webpack = require("webpack");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var node_modules = path.resolve(__dirname, 'node_modules');
-var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 
 module.exports = {
     devtool: 'source-map',
@@ -13,9 +11,7 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-        alias: {
-          'react': pathToReact
-        }
+        extensions: ['', '.js', '.jsx']
     },
     module: {
         preLoaders: [
@@ -43,9 +39,6 @@ module.exports = {
                 loader: 'url-loader?limit=100000'
             }
         ]
-    },
-    resolve: {
-        extensions: ['', '.js', '.jsx']
     },
     plugins: [
         new ExtractTextPlugin('styles.css')
