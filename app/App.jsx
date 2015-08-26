@@ -4,9 +4,9 @@ import './App.scss';
 export default class App extends React.Component {
 
     render() {
-        var pt
+        var toto;
         return (
-            <h1 className="App">Hello world</h1>
+            <h1 className='App'>Hello world</h1>
         );
     }
 

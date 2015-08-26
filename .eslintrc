@@ -1,9 +1,4 @@
 {
-    "ecmaFeatures": {
-        "jsx": true,
-        "modules": true
-    },
-    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "node": true,
@@ -12,23 +7,30 @@
     "plugins": [
         "react"
     ],
+    "parser": "babel-eslint",
+    "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+    },
     "rules": {
-        "new-cap": 0,
-        "strict": 0,
-        "no-underscore-dangle": 0,
-        "no-use-before-define": 0,
-        "eol-last": 0,
+        //ESLint rules
         "quotes": [2, "single"],
-        "react/jsx-boolean-value": 1,
-        "react/jsx-quotes": 1,
-        "react/jsx-no-undef": 1,
-        "react/jsx-uses-react": 1,
-        "react/jsx-uses-vars": 2,
-        "react/no-did-mount-set-state": 1,
-        "react/no-did-update-set-state": 1,
-        "react/no-multi-comp": 1,
-        "react/no-unknown-property": 1,
-        "react/react-in-jsx-scope": 1,
-        "react/self-closing-comp": 1
+        "no-unused-vars": 2,
+
+        //React rules
+        "react/display-name": 0, // Prevent missing displayName in a React component definition
+        "react/jsx-quotes": [2, "double", "avoid-escape"], // Enforce quote style for JSX attributes
+        "react/jsx-no-undef": 2, // Disallow undeclared variables in JSX
+        "react/jsx-sort-props": 0, // Enforce props alphabetical sorting
+        "react/jsx-uses-react": 2, // Prevent React to be incorrectly marked as unused
+        "react/jsx-uses-vars": 2, // Prevent variables used in JSX to be incorrectly marked as unused
+        "react/no-did-mount-set-state": 2, // Prevent usage of setState in componentDidMount
+        "react/no-did-update-set-state": 2, // Prevent usage of setState in componentDidUpdate
+        "react/no-multi-comp": 0, // Prevent multiple component definition per file
+        "react/no-unknown-property": 2, // Prevent usage of unknown DOM property
+        "react/prop-types": 2, // Prevent missing props validation in a React component definition
+        "react/react-in-jsx-scope": 2, // Prevent missing React when using JSX
+        "react/self-closing-comp": 2, // Prevent extra closing tags for components without children
+        "react/wrap-multilines": 2, // Prevent missing parentheses around multilines JSX
     }
 }
