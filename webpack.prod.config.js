@@ -15,7 +15,8 @@ var prodConfig = {
             compress: {
                 warnings: false
             }
-        })
+        }),
+        new webpack.optimize.DedupePlugin()
     ]
 };
 
