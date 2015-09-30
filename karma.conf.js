@@ -1,5 +1,4 @@
-module.exports = function (config) {
-  config.set({
+module.exports =  {
     basePath: '.',
     browsers: ['Chrome', 'Firefox', 'IE'],
     files: [
@@ -7,11 +6,9 @@ module.exports = function (config) {
     ],
     frameworks: ['jasmine'],
     preprocessors: {
-        'tests.webpack.js': ['webpack', 'sourcemap']
+        'tests.webpack.js': ['webpack']
     },
-    reporters: ['spec'],
     webpack: {
-        devtool: 'inline-source-map',
         module: {
             loaders: [
                 {
@@ -26,5 +23,4 @@ module.exports = function (config) {
     webpackServer: {
         noInfo: true
     }
-  });
 };
