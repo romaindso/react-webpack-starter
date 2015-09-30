@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --port 8080 --hot --inline --content-base build/ --config webpack.dev.config.js",
     "test": "./node_modules/.bin/karma start ./karma.conf.test.js",
+    "coverage": "./node_modules/.bin/karma start ./karma.conf.coverage.js",
     "deploy": "NODE_ENV=production webpack -p --config webpack.prod.config.js"
   },
   "keywords": [
@@ -32,10 +33,12 @@
     "eslint-plugin-react": "^3.2.3",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "isparta-loader": "^1.0.0",
     "jasmine": "^2.3.2",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.10",
     "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.5.2",
     "karma-firefox-launcher": "^0.1.6",
     "karma-ie-launcher": "^0.2.0",
     "karma-jasmine": "^0.3.6",
