@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --port 8080 --hot --inline --config webpack.dev.config.js",
+    "dev": "webpack-dev-server --port 8080 --hot --inline --content-base build/ --config webpack.dev.config.js",
     "deploy": "NODE_ENV=production webpack -p --config webpack.prod.config.js"
   },
   "keywords": [
