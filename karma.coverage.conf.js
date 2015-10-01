@@ -1,4 +1,4 @@
-var baseConfig = require('./karma.conf.js');
+var baseConfig = require('./karma.base.conf.js');
 var _ = require('lodash');
 
 var coverageConfig = {
