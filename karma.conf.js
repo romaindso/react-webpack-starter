@@ -1,6 +1,5 @@
 module.exports =  {
     basePath: '.',
-    browsers: ['Chrome', 'Firefox', 'IE'],
     files: [
         { pattern: 'tests.webpack.js', watched: false }
     ],
