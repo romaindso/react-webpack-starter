@@ -9,7 +9,8 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-        extensions: ['', '.js', '.jsx']
+      root: 'app',
+      extensions: ['', '.js', '.jsx']
     },
     module: {
         preLoaders: [
