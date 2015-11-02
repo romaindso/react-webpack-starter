@@ -1,5 +1,5 @@
-var baseConfig = require('./karma.base.conf.js');
 var _ = require('lodash');
+var baseConfig = _.clone(require('./karma.conf.base.js'), true);
 
 var testConfig = {
     browsers: ['Chrome', 'Firefox', 'IE'],
