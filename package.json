@@ -21,7 +21,8 @@
   "dependencies": {
     "babel-runtime": "^5.8.20",
     "lodash": "^3.10.1",
-    "react": "^0.13.3"
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
   },
   "devDependencies": {
     "babel-core": "^5.8.22",
@@ -46,6 +47,7 @@
     "karma-spec-reporter": "0.0.20",
     "karma-webpack": "^1.7.0",
     "node-sass": "^3.2.0",
+    "react-addons-test-utils": "^0.14.2",
     "sass-loader": "^2.0.1",
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6",
