@@ -1,3 +1,5 @@
+var path = require("path");
+
 module.exports =  {
     basePath: '.',
     files: [
@@ -14,10 +16,17 @@ module.exports =  {
                     test: /\.jsx?/,
                     exclude: /node_modules/,
                     loader: 'babel-loader'
+                },{
+                    test: /\.scss$/,
+                    loader: 'null-loader'
                 }
             ]
         },
-        watch: true
+        watch: true,
+        resolve: {
+            root: path.join(__dirname, 'app'),
+            extensions: ['', '.js', '.jsx']
+        }
     },
     webpackServer: {
         noInfo: true
