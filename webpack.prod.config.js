@@ -1,6 +1,6 @@
-var baseConfig = require('./webpack.base.config.js');
-var webpack = require("webpack");
 var _ = require('lodash');
+var webpack = require("webpack");
+var baseConfig = _.clone(require('./webpack.base.config.js'), true);
 
 var prodConfig = {
     module: {

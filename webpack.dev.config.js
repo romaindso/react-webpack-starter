@@ -1,6 +1,6 @@
-var baseConfig = require('./webpack.base.config.js');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var _ = require('lodash');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var baseConfig = _.clone(require('./webpack.base.config.js'), true);
 
 var devConfig = {
     devtool: 'source-map',
