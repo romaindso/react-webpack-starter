@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --port 8080 --hot --inline --content-base build/ --config webpack.dev.config.js",
-    "test": "./node_modules/.bin/karma start ./karma.test.conf.js",
+    "test": "./node_modules/.bin/karma start ./karma.conf.test.js",
     "coverage": "./node_modules/.bin/karma start ./karma.coverage.conf.js",
     "deploy": "NODE_ENV=production webpack -p --config webpack.prod.config.js"
   },
@@ -36,7 +36,7 @@
     "isparta-loader": "^1.0.0",
     "jasmine": "^2.3.2",
     "jasmine-core": "^2.3.4",
-    "karma": "^0.13.10",
+    "karma": "^0.13.14",
     "karma-chrome-launcher": "^0.2.0",
     "karma-coverage": "^0.5.2",
     "karma-firefox-launcher": "^0.1.6",
