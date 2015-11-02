@@ -9,26 +9,23 @@ module.exports = {
         publicPath: '/'
     },
     resolve: {
-      root: 'app',
+      root: path.join(__dirname, 'app'),
       extensions: ['', '.js', '.jsx']
     },
     module: {
-        preLoaders: [
-            {
-                test: /\.jsx?$/,
-                loader: 'eslint-loader',
-                exclude: /node_modules/
-            }
-        ],
+        preLoaders: [{
+            test: /\.jsx?$/,
+            loader: 'eslint-loader',
+            exclude: /node_modules/
+        }],
         loaders: [
             {
-                test: /\.jsx?$/,
-                exclude: /node_modules/,
-                loader: 'babel?optional[]=runtime'
-            },
-            {
-                test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
-                loader: 'url-loader?limit=100000'
+              test: /\.jsx?$/,
+              exclude: /node_modules/,
+              loader: 'babel?optional[]=runtime'
+            },{
+              test: /\.(png|jpg|woff|woff2|eot|ttf|svg)$/,
+              loader: 'url-loader?limit=100000'
             }
         ]
     }
