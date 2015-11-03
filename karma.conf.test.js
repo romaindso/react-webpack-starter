@@ -2,7 +2,7 @@ var _ = require('lodash');
 var baseConfig = _.clone(require('./karma.conf.base.js'), true);
 
 var testConfig = {
-    browsers: ['Chrome', 'Firefox', 'IE'],
+    browsers: ['Chrome', 'Firefox'], // browsers available => ['Chrome', 'Firefox, 'IE']
     preprocessors: {
         'tests.webpack.js': ['sourcemap']
     },

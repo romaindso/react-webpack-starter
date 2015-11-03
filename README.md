@@ -28,7 +28,7 @@ Execute test by running the following command :
 ```bash
 $ npm test
 ```
-By default, tests are executed on *Chrome*, *Firefox* and *Internet Explorer*. Use the `browsers` configuration option in the `karma.conf.test.js` file to override this behavior.
+By default, tests are executed on *Chrome*. Use the `browsers` configuration option in the `karma.conf.test.js` file to override this behavior. (Firefox and Internet Explorer are available but disabled).
 
 Process coverage report :
 ```bash
