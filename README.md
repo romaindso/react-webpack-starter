@@ -28,11 +28,13 @@ Execute test by running the following command :
 ```bash
 $ npm test
 ```
+By default, tests are executed on *Chrome*, *Firefox* and *Internet Explorer*. Use the `browsers` configuration option in the `karma.conf.test.js` file to override this behavior.
 
 Process coverage report :
 ```bash
 $ npm run coverage
 ```
+Coverage report is available in the `test\coverage` folder.
 
 ### ESLint
 All rules can be overwrite in the `.eslintrc` file.
