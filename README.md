@@ -35,7 +35,7 @@ The port number can be change in the `package.json` :
 ```
 
 ### Browsers for testing
-By default, tests are executed on *Chrome*. Use the `browsers` configuration option in the `karma.conf.test.js` file to override this behavior. (Firefox and Internet Explorer are available but disabled).
+By default, tests are executed on *Chrome*. Use the `browsers` configuration option in the `karma.conf.test.js` file to override this behavior. (*Firefox* and *Internet Explorer* are available but disabled).
 
 ### ESLint
 All rules can be overwrite in the `.eslintrc` file.
