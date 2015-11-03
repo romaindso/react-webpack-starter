@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var path = require("path");
 var baseConfig = _.clone(require('./karma.conf.base.js'), true);
 
 var coverageConfig = {
@@ -7,6 +8,8 @@ var coverageConfig = {
     webpack: {
         module: {
             preLoaders: [{
+                test: /\.jsx?$/,
+                include: path.join(__dirname, 'app'),
                 loaders: ['isparta']
             }]
         }
