@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --port 8080 --hot --inline --content-base build/ --config webpack.dev.config.js",
     "test": "./node_modules/.bin/karma start ./karma.conf.test.js",
-    "coverage": "./node_modules/.bin/karma start ./karma.coverage.conf.js",
+    "coverage": "./node_modules/.bin/karma start ./karma.conf.coverage.js",
     "deploy": "NODE_ENV=production webpack -p --config webpack.prod.config.js"
   },
   "keywords": [
