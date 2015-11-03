@@ -1,5 +1,6 @@
 # Project
 build/bundle.js
+test/coverage
 
 # NPM
 node_modules
