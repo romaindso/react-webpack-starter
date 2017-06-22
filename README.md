@@ -1,4 +1,4 @@
-# React Webpack Starter
+# [DEPRECATED] React Webpack Starter
 Setup a React app with Webpack using the ES6 syntax and ESLint for code quality.
 
 ## Installation
